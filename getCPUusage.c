@@ -5,7 +5,7 @@ int main(void)
 {
     long double before[4], after[4], used_clock;
     FILE *fp;
-    char dump[50];
+    char dump[50];//allocate memory
     fp = fopen("/proc/stat","r");
     fscanf(fp,"%*s %Lf %Lf %Lf %Lf",&before[0],&before[1],&before[2],&before[3]);//read the first 4 numbers which are user, nice, system, and idle clocks since boot
     fclose(fp);
